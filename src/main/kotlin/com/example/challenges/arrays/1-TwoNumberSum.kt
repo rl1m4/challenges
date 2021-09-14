@@ -53,7 +53,7 @@ fun twoNumberSum3(array: MutableList<Int>, target: Int): List<Int> {
     var left = 0
     var right = array.size - 1
 
-    for (number in 0 until array.size) {
+    while (left < right) {
         val sum = array[left] + array[right]
         when {
             sum == target -> return listOf(array[left], array[right])
